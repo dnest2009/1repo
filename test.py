@@ -374,3 +374,4 @@ def get_upcoming_birthdays(users, days=7):
 
 get_upcoming_birthdays = get_upcoming_birthdays(users,7)
 print (get_upcoming_birthdays)
+
