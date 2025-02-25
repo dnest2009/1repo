@@ -88,7 +88,7 @@ class Person:
         self.__passport = ps
 
 if __name__ == "__main__":
-    p = Person ("НестеренкоABCRtjkso Дмитро Валерійович", 120,"СМ 607853", 102)
+    p = Person ("Нестеренко Дмитро Валерійович", 120,"СМ 607853", 102)
     p.old = 100
     p.passport = "FR 098686"
     p.weight = 90
