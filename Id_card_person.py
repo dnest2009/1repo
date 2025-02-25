@@ -15,7 +15,7 @@ class Person:
     @classmethod
     def verify_fio(cls,fio):
         if type(fio) != str:
-            raise TypeError ("Прізвище повинно бути строкою")
+            raise TypeError ("ПІБ повинно бути строкою")
         
         f = fio.split()
         if len(f) !=3:
