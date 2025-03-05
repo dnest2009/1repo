@@ -29,10 +29,10 @@ def adjust_for_weekend(birthday):
     return birthday
 
 
-def get_upcoming_birthdays(users, days=7):
+def get_upcoming_birthdays(users, days=20):
     upcoming_birthdays = []
     today = date.today()
-    year = timedelta(days=365)
+    #year = timedelta(days=365)
     for user in users:
         birthday_this_year = user["birthday"].replace(year=today.year)
         if birthday_this_year < today:
@@ -45,3 +45,18 @@ def get_upcoming_birthdays(users, days=7):
                 congratulation_date_str = date_to_string(adjust_for_weekend(birthday_this_year))
                 upcoming_birthdays.append({"name": user["name"], "congratulation_date": congratulation_date_str})
     return upcoming_birthdays
+
+
+users = [
+    {"name": "Bill Gates", "birthday": "1955.3.25"},
+    {"name": "Steve Jobs", "birthday": "1955.3.21"},
+    {"name": "Jinny Lee", "birthday": "1956.3.22"},
+    {"name": "Sarah Lee", "birthday": "1957.3.23"},
+    {"name": "Jonny Lee", "birthday": "1958.3.22"},
+    {"name": "John Doe", "birthday": "1985.01.23"},
+    {"name": "Jane Smith", "birthday": "1990.01.27"}
+]
+
+users_list = prepare_user_list(users)
+#print(users_list)
+print(get_upcoming_birthdays(users_list))
